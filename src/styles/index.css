@@ -1,0 +1,21 @@
+
+
+:root {
+  --text-color: #565656;
+  --primary-color: #008AD8;
+}
+
+body {
+  margin: 0;
+  background: #F4F4F4;
+  font-family: 'Lexend Deca', sans-serif;
+}
+
+
+/* .search {
+  border: none;
+  padding: .8em;
+  border-radius: 2em;
+  background: white url('../public/search.svg') no-repeat right .8em center;
+  width: 100%;
+} */
