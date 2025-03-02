@@ -1,14 +1,18 @@
 
 
 :root {
-  --text-color: #565656;
+  --text-color: #ffffff;
+  --text-size: 18px;
+  --test-size-mobile: 18px;
   --primary-color: #008AD8;
+  --bg-color:  #0F172A;
 }
 
 body {
-  margin: 0;
-  background: #F4F4F4;
-  font-family: 'Lexend Deca', sans-serif;
+  font-size: var(--text-size);
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color)
 }
 
 
