@@ -28,3 +28,13 @@ body {
   background: white url('../public/search.svg') no-repeat right .8em center;
   width: 100%;
 } */
+
+.wrapper{
+  display: flex;
+  flex-direction: column;
+  min-block-size: 100%;
+}
+
+.wrapper > main {
+  flex-grow: 1;
+}
