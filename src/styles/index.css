@@ -1,4 +1,4 @@
-
+@import url('reset.css');
 
 :root {
   --text-color: #ffffff;
@@ -11,11 +11,16 @@
 body {
   font-size: var(--text-size);
   font-family: 'Roboto', sans-serif;
+
   background-color: var(--bg-color);
   color: var(--text-color)
 }
 
-
+[class*='__container']{
+  max-inline-size: 1310px;
+  margin-inline: auto;
+  padding-inline: 15px;
+}
 /* .search {
   border: none;
   padding: .8em;
