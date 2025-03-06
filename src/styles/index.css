@@ -16,11 +16,7 @@ body {
   color: var(--text-color)
 }
 
-[class*='__container']{
-  max-inline-size: 1310px;
-  margin-inline: auto;
-  padding-inline: 15px;
-}
+
 /* .search {
   border: none;
   padding: .8em;
@@ -32,9 +28,16 @@ body {
 .wrapper{
   display: flex;
   flex-direction: column;
-  min-block-size: 100%;
+  min-block-size: 100vh;
+  overflow: clip;
 }
 
-.wrapper > main {
+.wrapper  > .main {
   flex-grow: 1;
+}
+
+[class*='__container']{
+  max-inline-size: 1310px;
+  margin-inline: auto;
+  padding-inline: 15px;
 }
