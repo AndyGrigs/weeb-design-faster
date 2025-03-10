@@ -16,6 +16,7 @@ export const Header = () => {
           </a>
           <Menu />
           <WeebButton>Log in</WeebButton>
+          <WeebButton theme="buttonSmall">Log in</WeebButton>
         </div>
       </div>
     </header>
