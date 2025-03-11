@@ -10,13 +10,15 @@ export const Header = () => {
   return (
     <header className={styles.header}>
       <div className={styles.headerContainer}>
-        <div className={styles.hearerBody}>
+        <div className={styles.headerBody}>
           <a href="#" className={styles.headerLinkLogo}>
             weeb
           </a>
           <Menu />
-          <WeebButton>Log in</WeebButton>
-          <WeebButton theme="buttonSmall">Log in</WeebButton>
+          <div className={styles.headerActions}>
+            <WeebButton theme="buttonSmallTransparent">Log in</WeebButton>
+            <WeebButton>Join Now</WeebButton>
+          </div>
         </div>
       </div>
     </header>

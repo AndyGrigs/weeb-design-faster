@@ -1,1 +1,19 @@
-.Menu{}
+.menuList {
+  display: flex;
+  gap: 32px;
+}
+
+.menuLink {
+  letter-spacing: 0.5px;
+  transition: all 0.3s;
+}
+.menuLink:hover {
+  color: var(--primary-color);
+}
+
+
+@media screen and (max-width: 991.98px) {
+  .menuList {
+    
+  }
+}

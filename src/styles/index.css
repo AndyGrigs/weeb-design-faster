@@ -4,7 +4,7 @@
   --text-color: #ffffff;
   --text-size: 18px;
   --test-size-mobile: 18px;
-  --primary-color: #008AD8;
+  --primary-color: #aa51fe;
   --bg-color:  #0F172A;
 }
 
@@ -13,7 +13,7 @@ body {
   font-family: 'Roboto', sans-serif;
 
   background-color: var(--bg-color);
-  color: var(--text-color)
+  color: var(--text-color);
 }
 
 
