@@ -37,6 +37,10 @@
     align-items: center;
 }
 
+.headerBurger{
+  display: none;
+}
+
 @media screen and (max-width: 991.98px) {
     .header{
         padding-block: 15px;
@@ -47,4 +51,35 @@
         row-gap: 5px;
         padding: 15px;
     }
+
+    .headerActions{
+      column-gap: 10px;
+    }
+  }
+
+
+
+@media screen and (max-width: 768.98px) {
+  .headerBody{
+    padding-block: 8px;
+    padding-inline: 15px;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+  }
+
+  .headerBurger{
+    display: block;
+    position: relative;
+    z-index: 999;
+    inline-size: 48px;
+    block-size: 48px;
+  }
+
+  .span {
+    background: #fff;     /* white bars */
+    inline-size: 13px;
+    block-size: 4px;
+    border-radius: 3px;
+  }
+  
 }

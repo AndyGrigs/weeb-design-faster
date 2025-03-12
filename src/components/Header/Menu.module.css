@@ -14,6 +14,16 @@
 
 @media screen and (max-width: 991.98px) {
   .menuList {
-    
+    column-gap: 20px;
   }
 }
+
+@media screen and (max-width: 768.98px) {
+  .menuBody{
+    position: fixed;
+    inset-inline-start: 0;
+    inset-block-start: 0;
+    block-size: 100%;
+    inline-size: 100%;
+  }
+} 
