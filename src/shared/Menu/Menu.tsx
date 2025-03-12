@@ -15,7 +15,7 @@ export const Menu = () => {
         {menuLinks.map((link) => {
           return (
             <li className={st.menuLink} key={link.id}>
-              <a href="#">{link.name}</a>
+              <a href="./">{link.name}</a>
             </li>
           );
         })}

@@ -11,6 +11,12 @@
   color: var(--primary-color);
 }
 
+@media screen and (max-width: 1135.98px) {
+   .menuList{
+    display: none;
+   }
+}
+
 
 @media screen and (max-width: 991.98px) {
   .menuList {
