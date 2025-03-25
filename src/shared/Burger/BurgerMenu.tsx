@@ -3,15 +3,15 @@ import styles from "../../components/Header/Header.module.css";
 
 interface BurgerMenuProps {
   isMenuOpen: boolean;
-  setIsMenuOpen: React.Dispatch<React.SetStateAction<boolean>>;
+  onClose: ()=>void;
 }
 
-const BurgerMenu = ({ isMenuOpen, setIsMenuOpen }: BurgerMenuProps) => {
+const BurgerMenu = ({ isMenuOpen, onClose}: BurgerMenuProps) => {
   return (
     <button
       type="button"
       className={`${styles.iconMenu} ${isMenuOpen ? styles.active : ""}`}
-      onClick={() => setIsMenuOpen(!isMenuOpen)}
+      
     >
       <span></span>
     </button>

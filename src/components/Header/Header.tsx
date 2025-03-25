@@ -7,6 +7,7 @@ import BurgerMenu from "../../shared/Burger/BurgerMenu";
 
 export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   return (
     <header className={styles.header}>
       <div className={styles.headerContainer}>
@@ -42,7 +43,7 @@ export const Header = () => {
             <div className={styles.headerBurger}>
               <BurgerMenu
                 isMenuOpen={isMenuOpen}
-                setIsMenuOpen={setIsMenuOpen}
+                onClose={() => setIsMenuOpen(false)}
               />
             </div>
           </div>
