@@ -54,3 +54,12 @@
 .buttonSmallTransparent:hover {
   background-color: rgba(255, 255, 255, 0.1);
 }
+
+@media screen and (max-width: 1135.98px) {
+  .button {
+    font-size: 16px;
+    padding-inline: 28px;
+    padding-block: 12px;
+    line-height: 1.5;
+  }
+}

@@ -104,49 +104,12 @@
   .headerBody {
     padding-block: 8px;
     padding-inline: 15px;
-    grid-template-columns: auto auto;
-    justify-content: space-between;
+    /* grid-template-columns: auto auto;
+    justify-content: space-between; */
   }
 
   .headerBurger{
     margin-inline-start: 0;
   }
-
-  /* .headerBurger {
-    display: block;
-    position: relative;
-    block-size: 48px;
-    height: 100%;
-  }
-
-  .headerBurger button {
-    display: flex;
-    flex-direction: column;
-    margin-inline: auto;
-    margin-block: auto;
-  }
-
-  .headerBurger span,
-  .headerBurger::before,
-  .headerBurger::after {
-    content: "";
-    display: block;
-    background: #fff;
-    inline-size: 30px;
-    block-size: 4px;
-    border-radius: 3px;
-    margin-bottom: 4px;
-  }
-
-  .headerBurger::before {
-    margin-block-start: 8px;
-    inline-size: 15px;
-  }
-
-  .headerBurger::after {
-    margin-block-end: 8px;
-    inline-size: 15px;
-    margin-inline-start: auto;
-  } */
 
 }

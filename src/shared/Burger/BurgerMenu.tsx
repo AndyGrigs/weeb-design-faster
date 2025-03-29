@@ -1,16 +1,16 @@
 import React from "react";
 import styles from "../../components/Header/Header.module.css";
 
-interface BurgerMenuProps {
-  isMenuOpen: boolean;
-  onClose: ()=>void;
-}
+// interface BurgerMenuProps {
+//   isMenuOpen: boolean;
+//   onClose: ()=>void;
+// }
 
-const BurgerMenu = ({ isMenuOpen, onClose}: BurgerMenuProps) => {
+const BurgerMenu = () => {
   return (
     <button
       type="button"
-      className={`${styles.iconMenu} ${isMenuOpen ? styles.active : ""}`}
+      className={`${styles.iconMenu}`}
       
     >
       <span></span>

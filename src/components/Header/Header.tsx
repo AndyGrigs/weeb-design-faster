@@ -4,9 +4,11 @@ import styles from "./Header.module.css";
 import { Menu } from "../../shared/Menu/Menu";
 import { WeebButton } from "../../shared/WeebButton/WeebButton";
 import BurgerMenu from "../../shared/Burger/BurgerMenu";
+import Sidebar from "../../shared/Sidebar/Sidebar";
 
 export const Header = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  
 
   return (
     <header className={styles.header}>
@@ -31,24 +33,17 @@ export const Header = () => {
                 )
               }
             </Media>
-            {/* <Media
-              query="(min-width: 599px)"
-              render={() => (
-                <Fragment>
-                </Fragment>
-              )}
-            /> */}
-            {/* <WeebButton theme="buttonSmallTransparent">Log in</WeebButton>
-            <WeebButton>Join Now</WeebButton> */}
+    
             <div className={styles.headerBurger}>
               <BurgerMenu
-                isMenuOpen={isMenuOpen}
-                onClose={() => setIsMenuOpen(false)}
+                
               />
             </div>
+
           </div>
         </div>
       </div>
+    <Sidebar/>
     </header>
   );
 };
