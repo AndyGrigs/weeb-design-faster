@@ -11,18 +11,7 @@
   color: var(--primary-color);
 }
 
-@media screen and (max-width: 1135.98px) {
-   .menuList{
-    display: none;
-   }
-}
 
-
-@media screen and (max-width: 991.98px) {
-  .menuList {
-    column-gap: 20px;
-  }
-}
 
 /* @media screen and (max-width: 768.98px) {
   .menuBody{

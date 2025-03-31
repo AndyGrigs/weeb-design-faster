@@ -1,3 +1,15 @@
+.sidebar{
+    background-color: var(--bg-color2);
+    border-radius: 20px;
+    width: 380px;
+    height: 100vh;
+    position: fixed;
+    top: 4.2em;
+    left: -380px;
+    transition: all 0.3s ease-in-out;
 
+}
   
-  
+.sidebar.open {
+    left: 0;
+}

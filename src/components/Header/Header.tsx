@@ -7,8 +7,9 @@ import BurgerMenu from "../../shared/Burger/BurgerMenu";
 import Sidebar from "../../shared/Sidebar/Sidebar";
 
 export const Header = () => {
+  const [isOpen, setIsOpen] = useState(false);
 
-  
+  const toggle = () => setIsOpen(prev=>!prev);
 
   return (
     <header className={styles.header}>
@@ -33,17 +34,14 @@ export const Header = () => {
                 )
               }
             </Media>
-    
-            <div className={styles.headerBurger}>
-              <BurgerMenu
-                
-              />
-            </div>
 
+            <div className={styles.headerBurger}>
+              <BurgerMenu open={toggle}/>
+            </div>
           </div>
         </div>
       </div>
-    <Sidebar/>
+      <Sidebar isOpen={isOpen} toggleSidebar={toggle} />
     </header>
   );
 };

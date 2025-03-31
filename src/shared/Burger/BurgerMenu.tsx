@@ -1,17 +1,16 @@
 import React from "react";
 import styles from "../../components/Header/Header.module.css";
 
-// interface BurgerMenuProps {
-//   isMenuOpen: boolean;
-//   onClose: ()=>void;
-// }
+interface BurgerMenuProps {
+  open: ()=>void;
+}
 
-const BurgerMenu = () => {
+const BurgerMenu = ({open}: BurgerMenuProps) => {
   return (
     <button
       type="button"
       className={`${styles.iconMenu}`}
-      
+      onClick={()=> open()}
     >
       <span></span>
     </button>
