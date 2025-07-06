@@ -3,6 +3,7 @@ import styles from "../../components/Header/Header.module.css";
 
 interface BurgerMenuProps {
   open: ()=>void;
+  setIsMenuOpen: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 const BurgerMenu = ({open}: BurgerMenuProps) => {

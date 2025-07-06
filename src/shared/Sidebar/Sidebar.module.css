@@ -1,15 +1,96 @@
-.sidebar{
+.sidebar {
     background-color: var(--bg-color2);
     border-radius: 20px;
     width: 380px;
     height: 100vh;
     position: fixed;
-    top: 4.2em;
+    top: 0;
     left: -380px;
     transition: all 0.3s ease-in-out;
-
+    z-index: 1000;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 25px 50px -12px rgba(0, 0, 0, 0.25);
 }
   
 .sidebar.open {
     left: 0;
+}
+
+.closeBtn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    color: var(--text-color);
+    font-size: 24px;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.closeBtn:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.sidebarNav {
+    margin-top: 60px;
+    flex-grow: 1;
+}
+
+.sidebarList {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.sidebarItem {
+    padding: 0;
+}
+
+.sidebarLink {
+    display: block;
+    padding: 16px 20px;
+    color: var(--text-color);
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+.sidebarLink:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--primary-color);
+}
+
+.sidebarActions {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: auto;
+    padding-top: 24px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Адаптив для мобільних пристроїв */
+@media screen and (max-width: 480px) {
+    .sidebar {
+        width: 100%;
+        left: -100%;
+        border-radius: 0;
+        padding: 20px;
+    }
+    
+    .sidebar.open {
+        left: 0;
+    }
+    
+    .sidebarActions {
+        flex-direction: row;
+        gap: 8px;
+    }
 }

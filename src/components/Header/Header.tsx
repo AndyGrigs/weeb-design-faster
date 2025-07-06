@@ -18,7 +18,14 @@ export const Header = () => {
           <a href="./" className={styles.headerLinkLogo}>
             weeb
           </a>
-          <Menu />
+          
+          {/* Приховуємо меню на мобільних пристроях */}
+          <Media queries={{ mobile: { maxWidth: 1135.98 } }}>
+            {(matches) =>
+              matches.mobile ? null : <Menu />
+            }
+          </Media>
+          
           <div className={styles.headerActions}>
             <Media queries={{ small: { maxWidth: 768.98 } }}>
               {(matches) =>
@@ -35,12 +42,24 @@ export const Header = () => {
               }
             </Media>
 
-            <div className={styles.headerBurger}>
-              <BurgerMenu open={toggle}/>
-            </div>
+            <Media queries={{ mobile: { maxWidth: 1135.98 } }}>
+              {(matches) =>
+                matches.mobile ? (
+                  <div className={styles.headerBurger}>
+                    <BurgerMenu open={toggle} setIsMenuOpen={setIsOpen} />
+                  </div>
+                ) : null
+              }
+            </Media>
           </div>
         </div>
       </div>
+      {/* Overlay для сайдбара */}
+      <div 
+        className={`${styles.sidebarOverlay} ${isOpen ? styles.open : ''}`}
+        onClick={toggle}
+      />
+      
       <Sidebar isOpen={isOpen} toggleSidebar={toggle} />
     </header>
   );
