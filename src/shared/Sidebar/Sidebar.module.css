@@ -1,6 +1,5 @@
 .sidebar {
-    background-color: var(--bg-color2);
-    border-radius: 20px;
+    background-color: var(--bg-color);
     width: 380px;
     height: 100vh;
     position: fixed;
@@ -12,6 +11,7 @@
     display: flex;
     flex-direction: column;
     box-shadow: 0px 25px 50px -12px rgba(0, 0, 0, 0.25);
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
 }
   
 .sidebar.open {
@@ -30,6 +30,11 @@
     padding: 8px;
     border-radius: 50%;
     transition: all 0.3s ease;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .closeBtn:hover {
@@ -76,13 +81,26 @@
     border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-/* Адаптив для мобільних пристроїв */
-@media screen and (max-width: 480px) {
+/* Планшетна версія - 30% ширини */
+@media screen and (max-width: 991.98px) and (min-width: 769px) {
+    .sidebar {
+        width: 30%;
+        left: -30%;
+    }
+    
+    .sidebar.open {
+        left: 0;
+    }
+}
+
+/* Мобільна версія - на весь екран */
+@media screen and (max-width: 768.98px) {
     .sidebar {
         width: 100%;
         left: -100%;
         border-radius: 0;
         padding: 20px;
+        border-right: none;
     }
     
     .sidebar.open {
@@ -92,5 +110,30 @@
     .sidebarActions {
         flex-direction: row;
         gap: 8px;
+    }
+    
+    .closeBtn {
+        top: 15px;
+        right: 15px;
+    }
+    
+    .sidebarNav {
+        margin-top: 50px;
+    }
+}
+
+/* Дуже маленькі екрани */
+@media screen and (max-width: 480px) {
+    .sidebar {
+        padding: 15px;
+    }
+    
+    .sidebarLink {
+        font-size: 16px;
+        padding: 14px 16px;
+    }
+    
+    .sidebarActions {
+        gap: 6px;
     }
 }

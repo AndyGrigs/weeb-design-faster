@@ -2,6 +2,8 @@
   width: 80%;
   margin-inline: auto auto;
   padding-block: 24px;
+  position: relative;
+  z-index: 1001;
 }
 
 .headerLinkLogo {
@@ -60,6 +62,62 @@
   visibility: visible;
 }
 
+/* Бургер меню стилі */
+.iconMenu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  position: relative;
+}
+
+.iconMenu span,
+.iconMenu::before,
+.iconMenu::after {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 3px;
+  background-color: #fff;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+  position: absolute;
+}
+
+.iconMenu span {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.iconMenu::before {
+  top: 6px;
+}
+
+.iconMenu::after {
+  bottom: 6px;
+}
+
+/* Анімація хрестика */
+.iconMenu.active span {
+  opacity: 0;
+}
+
+.iconMenu.active::before {
+  top: 50%;
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.iconMenu.active::after {
+  bottom: 50%;
+  transform: translateY(50%) rotate(-45deg);
+}
+
 @media screen and (max-width: 1135.98px) {
   .headerBody {
     grid-template-columns: auto auto;
@@ -69,42 +127,26 @@
   .headerBurger {
     display: block;
     position: relative;
-    block-size: 48px;
-    height: 100%;
-  }
-
-  .headerBurger button {
+    height: 48px;
     display: flex;
-    flex-direction: column;
-    margin-inline: auto;
-    margin-block: auto;
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 8px;
+    align-items: center;
+  }
+}
+
+/* Планшетна версія */
+@media screen and (max-width: 991.98px) and (min-width: 769px) {
+  .header {
+    padding-block: 20px;
+    width: 90%;
   }
 
-  .headerBurger span,
-  .headerBurger::before,
-  .headerBurger::after {
-    content: "";
-    display: block;
-    background: #fff;
-    inline-size: 30px;
-    block-size: 4px;
-    border-radius: 3px;
-    margin-bottom: 4px;
+  .headerBody {
+    column-gap: 32px;
+    padding: 20px;
   }
 
-  .headerBurger::before {
-    margin-block-start: 8px;
-    inline-size: 15px;
-  }
-
-  .headerBurger::after {
-    margin-block-end: 8px;
-    inline-size: 15px;
-    margin-inline-start: auto;
+  .headerLinkLogo {
+    font-size: 28px;
   }
 }
 
@@ -125,9 +167,17 @@
 }
 
 @media screen and (max-width: 768.98px) {
+  .header {
+    width: 95%;
+  }
+  
   .headerBody {
-    padding-block: 8px;
-    padding-inline: 15px;
+    padding-block: 12px;
+    padding-inline: 20px;
+  }
+
+  .headerLinkLogo {
+    font-size: 24px;
   }
 
   .headerBurger {

@@ -9,7 +9,7 @@ import Sidebar from "../../shared/Sidebar/Sidebar";
 export const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
 
-  const toggle = () => setIsOpen(prev=>!prev);
+  const toggle = () => setIsOpen(prev => !prev);
 
   return (
     <header className={styles.header}>
@@ -46,7 +46,11 @@ export const Header = () => {
               {(matches) =>
                 matches.mobile ? (
                   <div className={styles.headerBurger}>
-                    <BurgerMenu open={toggle} setIsMenuOpen={setIsOpen} />
+                    <BurgerMenu 
+                      open={toggle} 
+                      setIsMenuOpen={setIsOpen} 
+                      isOpen={isOpen}
+                    />
                   </div>
                 ) : null
               }
@@ -54,6 +58,7 @@ export const Header = () => {
           </div>
         </div>
       </div>
+      
       {/* Overlay для сайдбара */}
       <div 
         className={`${styles.sidebarOverlay} ${isOpen ? styles.open : ''}`}
