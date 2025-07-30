@@ -1,7 +1,7 @@
-import {useState} from "react";
+
 import { Header } from "./components/Header/Header";
-import Sidebar from "./shared/Sidebar/Sidebar";
 import { HeroSection } from "./components/Header/HeroSection/HeroSection";
+import { BrowserMockup } from "./components/Header/BrowserMockup/BrowserMockup";
 
 function App() {
 
@@ -11,6 +11,7 @@ function App() {
       <Header />
       <main className="main">
         <HeroSection/>
+        <BrowserMockup/>
       </main>
       <footer className="footer"></footer>
     </div>

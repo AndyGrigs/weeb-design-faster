@@ -6,3 +6,9 @@ interface BrowserMockupProps {
     className?: string;
     animated?: boolean;
     }
+
+    export const BrowserMockup= ()=>{
+        return (
+            <h3>browser makeup components</h3>
+        )
+    }
