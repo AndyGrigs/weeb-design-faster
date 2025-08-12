@@ -11,7 +11,7 @@ export const HeroSection = () => {
                         Design Faster
                       <br />
                         <span className={styles.heroTitleAccent}>& Better</span>
-                    </h1>
+                                                                                                                                                                                                                                                                    </h1>
 
                     <p className={styles.heroDescription}>
                         Sit elit feugiat turpis sed integer integer accumsan
