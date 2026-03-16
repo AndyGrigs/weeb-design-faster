@@ -17,11 +17,6 @@ const menuLinks = [
 const Sidebar: FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
   return (
     <div className={`${styles.sidebar} ${isOpen ? styles.open : ''}`}>
-      {/* Кнопка закриття */}
-      <button className={styles.closeBtn} onClick={toggleSidebar}>
-        ×
-      </button>
-      
       {/* Меню */}
       <nav className={styles.sidebarNav}>
         <ul className={styles.sidebarList}>
