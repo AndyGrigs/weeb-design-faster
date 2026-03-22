@@ -1,0 +1,306 @@
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding-block: 40px;
+  width: 80%;
+  margin-inline: auto;
+}
+
+/* ── Feature card ── */
+.featureCard {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 48px;
+  background: var(--bg-color2);
+  border-radius: 20px;
+  padding: 56px 64px;
+  overflow: hidden;
+}
+
+.imageRight {
+  direction: ltr;
+}
+
+.imageLeft .textBlock {
+  order: 2;
+}
+.imageLeft .graphicBlock {
+  order: 1;
+}
+
+/* ── Text side ── */
+.label {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: var(--primary-color);
+  margin-bottom: 16px;
+}
+
+.title {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.25;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.highlight {
+  color: var(--primary-color);
+}
+
+.description {
+  font-size: 15px;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 28px;
+}
+
+.link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #fff;
+  transition: color 0.2s;
+}
+
+.link:hover {
+  color: var(--primary-color);
+}
+
+.arrow {
+  transition: transform 0.2s;
+}
+.link:hover .arrow {
+  transform: translateX(4px);
+}
+
+/* ── Graphic side ── */
+.graphicBlock {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 260px;
+}
+
+/* ── DISCOVER graphic ── */
+.discoverGraphic {
+  position: relative;
+  width: 220px;
+  height: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.donutSvg {
+  width: 100%;
+  height: 100%;
+}
+
+.orbitDot {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--primary-color);
+  opacity: 0.7;
+}
+
+.orbitDot1 { top: 0; left: 50%; transform: translateX(-50%); }
+.orbitDot2 { bottom: 10px; left: 5px; }
+.orbitDot3 { bottom: 10px; right: 5px; }
+
+/* ── POWERFUL graphic ── */
+.powerfulGraphic {
+  width: 100%;
+  max-width: 360px;
+}
+
+.mockBrowser {
+  background: #e8f0fe;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+}
+
+.mockBar {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 14px;
+  background: #dce8fd;
+}
+
+.mockDot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: block;
+}
+
+.mockContent {
+  display: flex;
+  height: 180px;
+}
+
+.mockSidebar {
+  width: 60px;
+  background: #d0dcf8;
+  padding: 12px 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.mockSidebarRow {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.mockSidebarIcon {
+  width: 12px;
+  height: 12px;
+  border-radius: 3px;
+  background: rgba(100, 120, 200, 0.4);
+  flex-shrink: 0;
+}
+
+.mockSidebarLine {
+  flex: 1;
+  height: 6px;
+  border-radius: 3px;
+  background: rgba(100, 120, 200, 0.3);
+}
+
+.mockCanvas {
+  flex: 1;
+  background: #e8f0fe;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.canvasDiamond {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+  width: 48px;
+  height: 48px;
+  border: 3px solid #BFDBFE;
+  background: transparent;
+}
+
+.canvasCircle {
+  position: absolute;
+  bottom: 20px;
+  left: 30px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #93C5FD;
+  opacity: 0.7;
+}
+
+.canvasHalfCircle {
+  position: absolute;
+  bottom: 20px;
+  left: 55px;
+  width: 36px;
+  height: 18px;
+  border-radius: 0 0 18px 18px;
+  background: #F97316;
+  opacity: 0.8;
+}
+
+.canvasRotateIcon {
+  position: absolute;
+  right: 24px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 52px;
+  height: 52px;
+}
+
+/* ── CUSTOMERS graphic ── */
+.customersGraphic {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 220px;
+  height: 220px;
+}
+
+.diamondWrapper {
+  position: relative;
+  width: 160px;
+  height: 160px;
+}
+
+.diamond {
+  position: absolute;
+  width: 110px;
+  height: 110px;
+  border-radius: 12px;
+}
+
+.diamondBack {
+  background: #7C3AED;
+  opacity: 0.5;
+  top: 10px;
+  left: 30px;
+  transform: rotate(20deg);
+}
+
+.diamondFront {
+  background: linear-gradient(135deg, #EC4899, #C026D3);
+  top: 25px;
+  left: 15px;
+  transform: rotate(-15deg);
+  box-shadow: 0 8px 32px rgba(192, 38, 211, 0.4);
+}
+
+/* ── Responsive ── */
+@media screen and (max-width: 991.98px) {
+  .section {
+    width: 90%;
+  }
+
+  .featureCard {
+    grid-template-columns: 1fr;
+    padding: 40px 32px;
+    gap: 32px;
+  }
+
+  .imageLeft .textBlock,
+  .imageLeft .graphicBlock {
+    order: unset;
+  }
+
+  .title {
+    font-size: 26px;
+  }
+}
+
+@media screen and (max-width: 768.98px) {
+  .section {
+    width: 95%;
+  }
+
+  .featureCard {
+    padding: 32px 24px;
+  }
+
+  .title {
+    font-size: 22px;
+  }
+}
