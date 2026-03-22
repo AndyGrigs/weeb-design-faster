@@ -13,11 +13,8 @@
 
 
 .menuBody{
-  position: fixed;
-  inset-inline-start: 0;
-  inset-block-start: 3em;
-  block-size: 100%;
-  inline-size: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 /* @media screen and (max-width: 768.98px) {

@@ -1,0 +1,324 @@
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 15px 80px;
+}
+
+/* ── Browser shell ── */
+.browser {
+  width: 100%;
+  max-width: 860px;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow:
+    0 40px 80px rgba(0, 0, 0, 0.5),
+    0 0 0 1px rgba(255, 255, 255, 0.08);
+  background: #dce9ff;
+}
+
+/* ── Top bar ── */
+.browserBar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 20px;
+  background: #1e2d45;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.dots {
+  display: flex;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+.dotRed,
+.dotYellow,
+.dotGreen {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+.dotRed    { background: #ff5f57; }
+.dotYellow { background: #febc2e; }
+.dotGreen  { background: #28c840; }
+
+.addressBar {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  padding: 6px 14px;
+  text-align: center;
+}
+
+.addressText {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.55);
+  letter-spacing: 0.3px;
+}
+
+.navButtons {
+  display: flex;
+  gap: 4px;
+  flex-shrink: 0;
+}
+
+.navBtn {
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 20px;
+  line-height: 1;
+  cursor: pointer;
+  padding: 2px 6px;
+  border-radius: 4px;
+  transition: color 0.2s;
+}
+.navBtn:hover { color: rgba(255, 255, 255, 0.75); }
+
+/* ── Content area ── */
+.browserContent {
+  display: grid;
+  grid-template-columns: 200px 1fr 1fr;
+  min-height: 360px;
+  background: #dce9ff;
+}
+
+/* ── Left editor sidebar ── */
+.editorSidebar {
+  background: #c5d8f8;
+  padding: 20px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  border-right: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.sidebarItemActive {
+  height: 10px;
+  width: 70%;
+  background: #7aabff;
+  border-radius: 6px;
+  margin-bottom: 6px;
+}
+
+.sidebarItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.iconCircle {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 2px solid #7aabff;
+  flex-shrink: 0;
+}
+
+.iconSquare {
+  width: 14px;
+  height: 14px;
+  border: 2px solid #7aabff;
+  flex-shrink: 0;
+}
+
+.iconTriangle {
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 14px solid #7aabff;
+  flex-shrink: 0;
+}
+
+.itemLines {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  flex: 1;
+}
+
+.line {
+  height: 7px;
+  background: rgba(122, 171, 255, 0.5);
+  border-radius: 4px;
+  width: 100%;
+}
+.lineShort { width: 60%; }
+
+/* ── Main editor ── */
+.editorMain {
+  padding: 24px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  border-right: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.textLines {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.textLine {
+  height: 8px;
+  background: rgba(122, 171, 255, 0.45);
+  border-radius: 4px;
+}
+.textLineFull   { width: 100%; }
+.textLineLong   { width: 85%; }
+.textLineMedium { width: 65%; }
+.textLineShort  { width: 40%; }
+.textLineTiny   { width: 25%; }
+
+.likeRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.heartIcon {
+  width: 18px;
+  height: 18px;
+  color: #a0bcee;
+  flex-shrink: 0;
+  margin-left: auto;
+}
+
+/* ── Cards grid ── */
+.cardsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  padding: 16px;
+  align-content: start;
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 12px;
+  aspect-ratio: 1;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Card 1 – yellow arc + diamond */
+.cardYellowArc {
+  position: absolute;
+  bottom: -20px;
+  left: -20px;
+  width: 90px;
+  height: 90px;
+  background: #f5a623;
+  border-radius: 50%;
+}
+
+.cardDiamond {
+  width: 42px;
+  height: 42px;
+  background: #dce9ff;
+  border: 2px solid #b0caee;
+  transform: rotate(45deg);
+  position: relative;
+  z-index: 1;
+  margin-left: 30px;
+  margin-bottom: 20px;
+}
+
+/* Card 2 – rotate icon */
+.cardRotateIcon {
+  width: 60%;
+}
+.cardRotateIcon svg { width: 100%; height: 100%; }
+
+/* Card 3 – small blue dot + arc */
+.cardBlueSmall {
+  position: absolute;
+  top: 24px;
+  left: 28px;
+  width: 28px;
+  height: 28px;
+  background: #7aabff;
+  border-radius: 50%;
+  opacity: 0.7;
+}
+
+.cardArcBottom {
+  position: absolute;
+  bottom: -28px;
+  left: -10px;
+  width: 90px;
+  height: 90px;
+  border: 14px solid #f5a623;
+  border-radius: 50%;
+}
+
+/* Card 4 – big blue circle + stars */
+.cardBlueLarge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 52px;
+  height: 52px;
+  background: #7aabff;
+  border-radius: 50%;
+  opacity: 0.55;
+}
+
+.cardStars {
+  position: absolute;
+  bottom: 12px;
+  left: 10px;
+  display: flex;
+  gap: 3px;
+}
+
+.star {
+  width: 14px;
+  height: 14px;
+}
+
+/* ── Responsive ── */
+@media screen and (max-width: 768px) {
+  .browserContent {
+    grid-template-columns: 140px 1fr;
+    grid-template-rows: auto auto;
+  }
+
+  .editorMain {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  .cardsGrid {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .card {
+    aspect-ratio: auto;
+    min-height: 90px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .browserContent {
+    grid-template-columns: 1fr;
+  }
+
+  .editorSidebar {
+    display: none;
+  }
+
+  .cardsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

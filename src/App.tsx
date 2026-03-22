@@ -1,7 +1,7 @@
 
+import { BrowserMockup } from "./components/Header/BrowserMockup/BrowserMockup";
 import { Header } from "./components/Header/Header";
 import { HeroSection } from "./components/Header/HeroSection/HeroSection";
-import { BrowserMockup } from "./components/Header/BrowserMockup/BrowserMockup";
 
 function App() {
 
