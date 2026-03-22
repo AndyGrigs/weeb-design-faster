@@ -1,0 +1,63 @@
+.section {
+  padding-block: 64px;
+  text-align: center;
+}
+
+.title {
+  font-size: 36px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 48px;
+  line-height: 1.2;
+}
+
+.logoGrid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px 64px;
+}
+
+.logoItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #fff;
+  opacity: 0.85;
+  transition: opacity 0.2s;
+}
+
+.logoItem:hover {
+  opacity: 1;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+}
+
+.name {
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+}
+
+@media screen and (max-width: 768.98px) {
+  .title {
+    font-size: 28px;
+    margin-bottom: 36px;
+  }
+
+  .logoGrid {
+    gap: 28px 40px;
+  }
+
+  .name {
+    font-size: 16px;
+  }
+}
